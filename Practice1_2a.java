@@ -1,8 +1,6 @@
 package jp.ac.kcg.foo;
 
 import javafx.application.Application;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -15,17 +13,9 @@ public class Practice1_2a extends Application {
 	public void start(Stage stage) throws Exception {
 		// TODO 自動生成されたメソッド・スタブ
 		Button helloButton = new Button("こんにちは、世界！"); // ボタンを作成
-		Button rightButton = new Button("右"); // ボタンを作成
-		Button leftButton = new Button("左"); // ボタンを作成
 		BorderPane root = new BorderPane(); // BorderPaneコンテナを作成
-		BorderPane.setAlignment(leftButton, Pos.CENTER_LEFT);
-		BorderPane.setMargin(leftButton, new Insets(0, 0, 0, 20));
-		BorderPane.setAlignment(rightButton, Pos.CENTER_RIGHT);
-		BorderPane.setMargin(rightButton, new Insets(0, 20, 0, 0));
 		TextField textField = new TextField();
 		root.setCenter(helloButton); // ボタンを BorderPane コンテナへ追加
-		root.setLeft(leftButton);
-		root.setRight(rightButton);
 		root.setTop(textField);
 		// BorderPaneコンテナを追加したシーンを作成
 		Scene scene = new Scene(root, 300, 100);
